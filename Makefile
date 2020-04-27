@@ -11,4 +11,4 @@ run:
 	--env=QT_X11_NO_MITSHM=1 \
 	--mount type=bind,src=/dev,dst=/dev,readonly \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-	 zense_pywrapper_test
+	 zense_pywrapper_test /bin/bash

@@ -1,5 +1,5 @@
 # Running builds
-1. Clone codes and submodule
+1. Clone codes and a submodule (In the case of "tmp" is working directory)
 ```
 mkdir -p tmp && cd tmp
 git clone https://github.com/yuki-inaho/zense_pywrapper_docker_1804.git --recursive
