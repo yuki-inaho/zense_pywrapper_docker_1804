@@ -12,7 +12,7 @@ make build
 ```
 
 # Operation check
-1. Move working directory to the above one, and execute a shell script.
+1. Move the working directory to the above one, and execute a script (picozense_pywrapper/main.py).
 ```
 cd tmp
 make run
