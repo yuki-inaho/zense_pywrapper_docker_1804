@@ -48,7 +48,7 @@ RUN mkdir -p /etc/udev/rules.d
     
 RUN ./install_zense_sdk.sh
 
-ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/root/.local/lib
+ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/root/.local/lib:/usr/local/lib
 ENV PATH $PATH:/root/.local/bin
 
 RUN ./install_zwrapper.sh
