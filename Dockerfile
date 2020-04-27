@@ -31,7 +31,7 @@ RUN cmake -DWITH_TBB=ON \
     -DWITH_EIGEN=ON \
     -DWITH_V4L=ON \
     -DCMAKE_BUILD_TYPE=RELEASE \
-    -DCMAKE_INSTALL_PREFIX=$(python -c "import sys; print(sys.prefix)") \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DPYTHON_EXECUTABLE=$(which python) \
     -DPYTHON_INCLUDE_DIR=$(python -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
     -DPYTHON_PACKAGES_PATH=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
@@ -48,8 +48,8 @@ RUN mkdir -p /etc/udev/rules.d
     
 RUN ./install_zense_sdk.sh
 
-ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:$HOME/.local/lib
-ENV PATH $PATH:$HOME/.local/bin
+ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/root/.local/lib
+ENV PATH $PATH:/root/.local/bin
 
 RUN ./install_zwrapper.sh
 
